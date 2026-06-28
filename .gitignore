@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Test / tooling caches
+.pytest_cache/
+.hypothesis/
+.coverage
+htmlcov/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- Staged release: held until Paper 2 (see release-v2/RESTORE.md) ---
+# The entity-resolution layer (matching + natural keys) ships with v0.2.0.
+# Kept on disk for local development, excluded from the v1 public commit.
+src/anchorkey/entity_resolution/
+tests/test_entity_resolution.py
+release-v2/

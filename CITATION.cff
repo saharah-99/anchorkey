@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "anchorkey: zero-trust provenance for observed-entity telemetry under identifier drift"
+abstract: >-
+  A small, dependency-free framework for earning a stable identity for IoT and
+  observed-entity telemetry: deterministic natural-key normalization under identifier
+  drift, with (forthcoming) conservative entity matching and tamper-evident sealing. The
+  reference implementation for a technical paper series on surrogate-key failure under
+  identifier drift.
+type: software
+authors:
+  - family-names: Saha
+    given-names: Rahul
+    orcid: "https://orcid.org/0009-0006-8172-0676"
+version: "0.1.0"
+license: Apache-2.0
+keywords:
+  - IoT
+  - telemetry
+  - identity resolution
+  - entity resolution
+  - data quality
+  - natural key
+repository-code: "https://github.com/saharah-99/anchorkey"

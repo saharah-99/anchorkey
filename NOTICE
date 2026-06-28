@@ -1,0 +1,9 @@
+anchorkey
+Copyright 2026 Rahul Saha
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This product includes a sample of public-domain sensor metadata retrieved from the
+openSenseMap project (https://opensensemap.org), made available under the Open Data Commons
+Public Domain Dedication and License (PDDL) 1.0. The sample is used here for demonstration and
+reproducibility of the accompanying paper series.
