@@ -1,6 +1,6 @@
 # anchorkey
 
-**Zero-trust provenance for observed-entity telemetry: identity resolution under identifier
+**Auditable provenance for observed-entity telemetry: identity resolution under identifier
 drift, with tamper-evident sealing.**
 
 When a pipeline gives every *observed identifier string* its own primary key, one physical

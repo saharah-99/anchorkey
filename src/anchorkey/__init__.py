@@ -1,7 +1,7 @@
 """
 anchorkey — earn a stable identity for observed-entity telemetry before you key on it.
 
-Zero-trust provenance for observed-entity telemetry: identity resolution under identifier
+Auditable provenance for observed-entity telemetry: identity resolution under identifier
 drift, with tamper-evident sealing. This release ships the normalization layer (Paper 1); the
 entity-resolution layer (matching + natural keys) and the tamper-evident ledger are forthcoming
 with later papers in the series (see the README roadmap).

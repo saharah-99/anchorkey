@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata below."
-title: "anchorkey: zero-trust provenance for observed-entity telemetry under identifier drift"
+title: "anchorkey: auditable provenance for observed-entity telemetry under identifier drift"
 abstract: >-
   A small, dependency-free framework for earning a stable identity for IoT and
   observed-entity telemetry: deterministic natural-key normalization under identifier
