@@ -1,3 +1,5 @@
+# anchorkey: research/educational reference implementation for a technical paper series.
+# Provided as-is under Apache-2.0 (no warranty); a personal learning project, not a commercial product.
 """
 normalize.py — turn a messy observed identifier string into a stable natural key.
 

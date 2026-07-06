@@ -14,6 +14,10 @@ It is the reference implementation for a technical paper series on surrogate-key
 identifier drift (links below). Every number in the docs comes from real, public openSenseMap
 sensor data.
 
+> **A research and educational reference implementation.** This accompanies a technical paper
+> series and is a personal learning project, provided as-is under Apache-2.0 with no warranty.
+> It is not a commercial product or service.
+
 ```
 SDS 011   ─┐
 SDS011    ─┼─ normalize() ─▶  "sds011"

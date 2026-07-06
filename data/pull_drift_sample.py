@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# anchorkey: research/educational reference implementation for a technical paper series.
+# Provided as-is under Apache-2.0 (no warranty); a personal learning project, not a commercial product.
 """
 pull_drift_sample.py — reproducible identifier-drift sample from openSenseMap.
 

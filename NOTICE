@@ -3,6 +3,10 @@ Copyright 2026 Rahul Saha
 
 Licensed under the Apache License, Version 2.0 (see LICENSE).
 
+This is a research and educational reference implementation accompanying a technical paper
+series. It is a personal learning project, provided as-is with no warranty, and is not a
+commercial product or service.
+
 This product includes a sample of public-domain sensor metadata retrieved from the
 openSenseMap project (https://opensensemap.org), made available under the Open Data Commons
 Public Domain Dedication and License (PDDL) 1.0. The sample is used here for demonstration and
