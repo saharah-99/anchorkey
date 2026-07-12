@@ -4,8 +4,8 @@
 anchorkey — earn a stable identity for observed-entity telemetry before you key on it.
 
 Auditable provenance for observed-entity telemetry: identity resolution under identifier
-drift, with tamper-evident sealing. This release ships the normalization layer (Paper 1); the
-entity-resolution layer (matching + natural keys) and the tamper-evident ledger are forthcoming
+drift, with immutable-snapshot integrity. This release ships the normalization layer (Paper 1); the
+entity-resolution layer (matching + natural keys) and the immutable-snapshot storage layer are forthcoming
 with later papers in the series (see the README roadmap).
 
 The package is organised by pipeline stage:

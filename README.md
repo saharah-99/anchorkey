@@ -1,14 +1,14 @@
 # anchorkey
 
 **Auditable provenance for observed-entity telemetry: identity resolution under identifier
-drift, with tamper-evident sealing.**
+drift, with immutable-snapshot integrity.**
 
 When a pipeline gives every *observed identifier string* its own primary key, one physical
 thing fragments into many keys the moment that string drifts, and in the real world it always
 drifts. Then every count and average computed across the fleet is silently wrong, and nothing
 throws an error. `anchorkey` is a small, dependency-free library that *anchors* identity to a
 **stable natural key** derived from messy observed names, so the same thing collapses to the
-same key, and (planned) seals that identity into a tamper-evident ledger.
+same key, and (planned) preserves that identity in immutable snapshots.
 
 It is the reference implementation for a technical paper series on surrogate-key failure under
 identifier drift (links below). Every number in the docs comes from real, public openSenseMap
@@ -83,8 +83,8 @@ to vendor. The code is commented to be followed by readers who do not write Pyth
 - **Entity resolution** (typos like `SDS1001` → `SDS011`, accessory-vs-device, cross-source
   duplicates): natural-key matching with a conservative fuzzy fallback. *Forthcoming with the
   next paper in the series.*
-- **Tamper-evident ledger**: hash-chained, sealed snapshots, built *after* identity is correct
-  so the seal protects a true grouping. *Planned.*
+- **Immutable snapshots**: idempotent storage of correct identities in a data lake, built
+  *after* identity is correct so the stored grouping is a true one. *Planned.*
 
 ---
 
@@ -96,12 +96,12 @@ The package is organised by pipeline stage, mirroring the paper series:
 anchorkey/
   ingestion/           normalize observed strings into stable natural keys   (ships today)
   # entity_resolution/ match typos, derive the natural key                   (forthcoming)
-  # ledger/            tamper-evident sealing of correct identities          (planned)
+  # storage/           idempotent storage + immutable snapshots               (planned)
 ```
 
 `ingestion` ships today. Each later stage is added when it has real code, not before, so
 nothing here advertises a capability that does not exist. Identity is made correct *first*, by
-design, so a later seal protects a true grouping.
+design, so a later immutable snapshot preserves a true grouping.
 
 ---
 
@@ -121,9 +121,7 @@ underneath: it earns that identity when the world hands you 88 different ways to
 2. **Entity resolution with natural keys** — the matching that handles typos and cross-source
    duplicates. *(forthcoming)*
 3. Resource optimization — adaptive cadence and noise filtering. *(planned)*
-4. Idempotency end-to-end in a data lake. *(planned)*
-5. Cryptographic verification ledger — tamper-evident snapshots, built *after* identity is
-   correct. *(planned)*
+4. Idempotent storage architecture and immutable snapshots in a data lake. *(planned)*
 
 ---
 

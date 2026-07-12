@@ -4,7 +4,7 @@ title: "anchorkey: auditable provenance for observed-entity telemetry under iden
 abstract: >-
   A small, dependency-free framework for earning a stable identity for IoT and
   observed-entity telemetry: deterministic natural-key normalization under identifier
-  drift, with (forthcoming) conservative entity matching and tamper-evident sealing. The
+  drift, with (forthcoming) conservative entity matching and immutable-snapshot integrity. The
   reference implementation for a technical paper series on surrogate-key failure under
   identifier drift.
 type: software
