@@ -22,7 +22,7 @@ sensor data.
 SDS 011   ─┐
 SDS011    ─┼─ normalize() ─▶  "sds011"
 sds011    ─┘
-SDS1001   ──── stays separate (a typo, not a spelling variant — that's a matching problem)
+SDS1001   ──── stays separate (a typo, not a spelling variant — a different problem entirely)
 ```
 
 ---
@@ -80,9 +80,9 @@ to vendor. The code is commented to be followed by readers who do not write Pyth
 
 ### Roadmap
 
-- **Entity resolution** (typos like `SDS1001` → `SDS011`, accessory-vs-device, cross-source
-  duplicates): natural-key matching with a conservative fuzzy fallback. *Forthcoming with the
-  next paper in the series.*
+- **Entity resolution**: natural keys plus an explicit boundary — merge what can be proven
+  identical, and surface everything else for human adjudication rather than guessing at it.
+  *Forthcoming with the next paper in the series.*
 - **Immutable snapshots**: idempotent storage of correct identities in a data lake, built
   *after* identity is correct so the stored grouping is a true one. *Planned.*
 
@@ -95,7 +95,7 @@ The package is organised by pipeline stage, mirroring the paper series:
 ```
 anchorkey/
   ingestion/           normalize observed strings into stable natural keys   (ships today)
-  # entity_resolution/ match typos, derive the natural key                   (forthcoming)
+  # entity_resolution/ natural keys + the boundary of safe automation        (forthcoming)
   # storage/           idempotent storage + immutable snapshots               (planned)
 ```
 
@@ -117,9 +117,9 @@ underneath: it earns that identity when the world hands you 88 different ways to
 ## The paper series
 
 1. **Surrogate-key failure under identifier drift** — the diagnosis, on real openSenseMap data.
-   *(this release backs it)*
-2. **Entity resolution with natural keys** — the matching that handles typos and cross-source
-   duplicates. *(forthcoming)*
+   [*Published on Towards Data Science.*](https://towardsdatascience.com/avoiding-entity-key-drift-in-a-data-lake-step-1-normalization/) *(this release backs it)*
+2. **Entity resolution with natural keys** — where string similarity stops working, and the
+   architecture that boundary forces. *(forthcoming)*
 3. Resource optimization — adaptive cadence and noise filtering. *(planned)*
 4. Idempotent storage architecture and immutable snapshots in a data lake. *(planned)*
 
