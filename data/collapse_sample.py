@@ -18,7 +18,7 @@ the paper ever disagree, the script prints FAIL and exits non-zero, so the prose
 data can never drift apart silently.
 
 Usage:
-    pip install anchorkey        # the paper's own reference implementation
+    git clone https://github.com/saharah-99/anchorkey && pip install -e anchorkey   # the reference implementation
     python collapse_sample.py
 """
 
@@ -34,8 +34,8 @@ try:
 except ImportError:
     sys.stderr.write(
         "This script needs the paper's reference implementation.\n"
-        "Install it with:  pip install anchorkey\n"
-        "(or, from a local checkout:  pip install -e path/to/anchorkey)\n"
+        "Get it with:  git clone https://github.com/saharah-99/anchorkey\n"
+        "then:         pip install -e anchorkey\n"
     )
     raise SystemExit(2)
 

@@ -23,9 +23,28 @@ Thumbs.db
 .idea/
 .vscode/
 
-# --- Staged release: held until Paper 2 (see release-v2/RESTORE.md) ---
-# The entity-resolution layer (matching + natural keys) ships with v0.2.0.
-# Kept on disk for local development, excluded from the v1 public commit.
-src/anchorkey/entity_resolution/
-tests/test_entity_resolution.py
+# --- Release staging area (never published) ---
+# Working notes and superseded staging copies for the in-progress release.
+# NOTE: gitignore does not unstage already-tracked files. To hold a file that is
+# currently staged, also run: git rm --cached <path>  (keeps it on disk).
 release-v2/
+
+# --- Held until Paper 3 ships ---
+# Resource-optimization inputs (adaptive cadence / noise filtering). No Paper 2
+# content, and nothing published references them.
+# Before adding anything here, check that no shipped script imports it and that no
+# published article cites it: a paper citing a script a reader cannot obtain breaks
+# the reproducibility claim the whole series trades on.
+data/pull_reading_sample.py
+data/reading_sample.csv
+data/reading_sample_meta.json
+
+# --- Never hold these (Paper 1, already public) ---
+# data/pull_drift_sample.py, data/raw_snapshot.json, data/collapse_sample.py,
+# figures/fig1_*, fig2_*, fig3_*
+
+# --- Released with v0.2.0 / Paper 2, previously held here ---
+# src/anchorkey/entity_resolution/, tests/test_entity_resolution.py,
+# tests/test_separability.py, data/ground_truth_catalog.csv, data/keyshape_sample.py,
+# data/separability_sample.py, data/review_queue_sample.py, data/make_figures.py,
+# figures/fig4_*, figures/fig5_*.

@@ -4,15 +4,20 @@ title: "anchorkey: auditable provenance for observed-entity telemetry under iden
 abstract: >-
   A small, dependency-free framework for earning a stable identity for IoT and
   observed-entity telemetry: deterministic natural-key normalization under identifier
-  drift, with (forthcoming) conservative entity matching and immutable-snapshot integrity. The
-  reference implementation for a technical paper series on surrogate-key failure under
-  identifier drift.
+  drift, plus an entity-resolution layer that merges only what normalization proves
+  identical and defers every other pair to an auditable, effective-dated human label.
+  Fuzzy auto-merge is deliberately absent rather than unimplemented: five string-similarity
+  metrics were measured against datasheet-verified ground truth and all of them merge
+  genuinely different parts at any threshold loose enough to catch genuine typos, because
+  the deciding fact is a manufacturer's catalog external to the string. Immutable-snapshot
+  integrity is forthcoming with a later paper. The reference implementation for a technical
+  paper series on surrogate-key failure under identifier drift.
 type: software
 authors:
   - family-names: Saha
     given-names: Rahul
     orcid: "https://orcid.org/0009-0006-8172-0676"
-version: "0.1.0"
+version: "0.2.0"
 license: Apache-2.0
 keywords:
   - IoT
@@ -22,3 +27,36 @@ keywords:
   - data quality
   - natural key
 repository-code: "https://github.com/saharah-99/anchorkey"
+
+# NOTE ON DOIs, because two different things are citable here and conflating them is wrong.
+#
+# The Zenodo record below is typed *Dataset*: it archives the openSenseMap capture and the
+# analysis scripts. It is NOT a DOI for this software, so it must not appear as a top-level
+# `doi:` here -- that would tell anyone citing anchorkey to cite the dataset instead.
+#
+# The software has no DOI yet. Once the GitHub-Zenodo integration archives a tagged release,
+# add the minted software DOI as a top-level field:
+#     doi: "10.5281/zenodo.XXXXXXXX"
+
+references:
+  - type: data
+    title: "openSenseMap identifier-drift sample (719 boxes, 2026-06-26)"
+    authors:
+      - family-names: Saha
+        given-names: Rahul
+        orcid: "https://orcid.org/0009-0006-8172-0676"
+    doi: "10.5281/zenodo.20989076"
+    year: 2026
+    license: ODC-PDDL-1.0
+    notes: >-
+      The archived capture every figure and measurement in the series is computed from.
+      This is the concept DOI and always resolves to the newest version.
+  - type: article
+    title: "Avoiding Entity Key Drift in a Data Lake: Step 1, Normalization"
+    authors:
+      - family-names: Saha
+        given-names: Rahul
+        orcid: "https://orcid.org/0009-0006-8172-0676"
+    year: 2026
+    url: "https://towardsdatascience.com/avoiding-entity-key-drift-in-a-data-lake-step-1-normalization/"
+    notes: "Step 1 of the series. Published in Towards Data Science, a trade publication."
