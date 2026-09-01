@@ -234,4 +234,19 @@ network access to reproduce.
 To cite the software itself, use [CITATION.cff](CITATION.cff) or the **"Cite this repository"**
 button in the GitHub sidebar.
 
+---
+
+## If this was useful
+
+⭐ **A star helps other people hit the same bug find this.** That is the only reason it is worth
+anything here: search and GitHub's own ranking both weight it, and this is a narrow problem that
+people only look for once it has already cost them a week.
+
+If you have hit identifier drift in your own pipelines, [open an
+issue](https://github.com/saharah-99/anchorkey/issues) and say how it showed up. Cases from other
+domains are genuinely wanted — the argument in the papers is that the deciding fact lives outside
+the string, and every new domain that turns out to be true in makes it stronger. A counter-example
+would be even more interesting: if you found a matcher that *did* hold up on short alphanumeric
+codes, that is a result worth hearing about.
+
 See [CONTRIBUTING.md](CONTRIBUTING.md). Licensed under [Apache-2.0](LICENSE).
