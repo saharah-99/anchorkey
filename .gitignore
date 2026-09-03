@@ -27,6 +27,12 @@ Thumbs.db
 # Working notes and superseded staging copies for the in-progress release.
 # NOTE: gitignore does not unstage already-tracked files. To hold a file that is
 # currently staged, also run: git rm --cached <path>  (keeps it on disk).
+# (release-v2/ was the v0.2.0 staging area. Deleted 2026-09-02 once the release shipped;
+# its durable safeguards live in tests/test_public_api.py, which is committed and survives.
+# Kept ignored so a stray recreation is never committed by accident — but do NOT recreate the
+# pattern: a staged copy written before live changes land will silently revert them at copy
+# time, which is exactly how the v0.2.0 README dropped Paper 1's link. Hold files with
+# .gitignore alone and edit them in place.)
 release-v2/
 
 # --- Held until Paper 3 ships ---
