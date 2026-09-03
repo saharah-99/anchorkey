@@ -69,13 +69,18 @@ def test_subpackage_reexports_are_a_subset_of_the_top_level():
     )
 
 
-@pytest.mark.parametrize("script", ["examples/quickstart.py", "release-v2/quickstart.py"])
+@pytest.mark.parametrize("script", ["examples/quickstart.py"])
 def test_quickstart_only_imports_names_the_package_exports(script: str):
-    """Parses the import statement rather than executing, so a held script is still checked.
+    """Parses the import statement rather than executing, so the script is checked without
+    being run.
 
-    `release-v2/quickstart.py` is the staged v0.2.0 onboarding path. It is not on the
-    normal import path and no other test touches it, which is why its ImportError went
-    unnoticed until someone ran it by hand.
+    WHY THIS EXISTS: during the v0.2.0 staging period a second, held copy of the quickstart
+    imported `describe` while the top-level package did not export it. Nothing caught it,
+    because no test imported that script, and it surfaced only when someone ran it by hand.
+    The staged copy is gone (release-v2/ was deleted 2026-09-02 after the release), but the
+    check stays: any quickstart is onboarding code, and onboarding code that raises
+    ImportError is worse than no quickstart at all. Add new entries to the parametrize list
+    if another one is ever added.
     """
     path = _ROOT / script
     if not path.exists():
@@ -157,9 +162,9 @@ def test_every_submodule_the_package_imports_is_tracked_by_git():
 def test_version_is_consistent_across_packaging_metadata():
     """__init__, pyproject and CITATION.cff must agree.
 
-    They are currently allowed to disagree only while the v0.2.0 release is unfinished;
-    see release-v2/RESTORE.md step 4. This test is what stops a half-finished bump from
-    shipping silently.
+    All three carry the version independently, so a bump is three edits and it is easy to
+    make two of them. This test is what stops a half-finished bump from shipping silently:
+    change all three in the same commit, or the suite fails.
     """
     init_v = anchorkey.__version__
     pyproject = (_ROOT / "pyproject.toml").read_text(encoding="utf-8")
