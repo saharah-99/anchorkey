@@ -58,5 +58,20 @@ references:
         given-names: Rahul
         orcid: "https://orcid.org/0009-0006-8172-0676"
     year: 2026
+    month: 7
     url: "https://towardsdatascience.com/avoiding-entity-key-drift-in-a-data-lake-step-1-normalization/"
     notes: "Step 1 of the series. Published in Towards Data Science, a trade publication."
+  - type: article
+    title: "Avoiding Entity Key Drift in a Data Lake: Step 2, When Fuzzy Matching Stops Working"
+    authors:
+      - family-names: Saha
+        given-names: Rahul
+        orcid: "https://orcid.org/0009-0006-8172-0676"
+    year: 2026
+    month: 9
+    url: "https://towardsdatascience.com/avoiding-entity-key-drift-in-a-data-lake-step-2-when-fuzzy-matching-stops-working/"
+    notes: >-
+      Step 2 of the series, and the paper this release backs. Reports the measured negative
+      result that no string-similarity metric separates typos from genuinely distinct part
+      numbers, and derives the deferral architecture implemented here. Published in Towards
+      Data Science, a trade publication.

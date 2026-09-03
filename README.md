@@ -163,7 +163,8 @@ underneath: it earns that identity when the world hands you 88 different ways to
    *(this repo backs it)*
 2. **Entity resolution with natural keys** — where string similarity stops working, why the
    failure is structural, and the effective-dated label layer it forces.
-   *Published on Towards Data Science — link to follow.* *(this repo backs it)*
+   [*Published on Towards Data Science.*](https://towardsdatascience.com/avoiding-entity-key-drift-in-a-data-lake-step-2-when-fuzzy-matching-stops-working/)
+   *(this repo backs it)*
 3. Resource optimization — adaptive cadence and noise filtering. *(planned)*
 4. Idempotent storage architecture and immutable snapshots in a data lake. *(planned)*
 
